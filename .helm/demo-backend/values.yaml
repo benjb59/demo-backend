@@ -1,4 +1,4 @@
-# Default values for demobackend.
+# Default values for demo-backend.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -46,7 +46,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: demobackend.dev.insee.io
+    - host: demo-backend.dev.insee.io
       paths:
         - /
   tls: []
