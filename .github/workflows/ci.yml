@@ -42,6 +42,6 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ steps.docker_meta.outputs.tags }}
-            ${{ github.ref == 'refs/heads/master' && 'inseefrlab/k8s-onboarding:latest' || '' }}
+            ${{ github.ref == 'refs/heads/master' && 'melobenja/demo-backend:latest' || '' }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
