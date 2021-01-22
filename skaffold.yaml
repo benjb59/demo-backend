@@ -1,0 +1,10 @@
+apiVersion: skaffold/v2beta10
+kind: Config
+metadata:
+  name: demo-backend
+deploy:
+  helm:
+    releases:
+    - name: demo-backend2
+      chartPath: .helm/demo-backend
+      valuesFiles: [ .helm/custom-values.yaml ]
