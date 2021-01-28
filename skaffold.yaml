@@ -2,9 +2,17 @@ apiVersion: skaffold/v2beta10
 kind: Config
 metadata:
   name: demo-backend
+build:
+     artifacts:
+     - image: demo-backend
+       context: .
+       jib: {}
 deploy:
   helm:
     releases:
     - name: demo-backend2
       chartPath: .helm/demo-backend
       valuesFiles: [ .helm/custom-values.yaml ]
+      artifactOverrides:
+        image: demo-backend # no tag present!
+        # Skaffold continuously tags your image, so no need to put one here.

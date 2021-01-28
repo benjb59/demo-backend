@@ -4,11 +4,8 @@
 
 replicaCount: 1
 
-image:
-  repository: melobenja/demo-backend
-  pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+imageConfig:
+  pullPolicy: IfNotPresent
 
 imagePullSecrets: []
 nameOverride: ""
