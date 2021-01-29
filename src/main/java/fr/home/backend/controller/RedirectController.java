@@ -41,6 +41,7 @@ public class RedirectController {
 
     /**
      * Répondrait à https://entreprises.stat-publique.fr/api/references/{enquete}
+     * endpoint protégé
      */
     @GetMapping(value = "/api/references/{enquete}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Reference> getReference(@PathVariable("enquete") String enquete) {
