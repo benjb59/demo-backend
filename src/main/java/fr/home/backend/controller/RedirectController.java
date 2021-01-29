@@ -44,8 +44,8 @@ public class RedirectController {
      */
     @GetMapping(value = "/api/references/{enquete}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Reference> getReference(@PathVariable("enquete") String enquete) {
-        final Reference er = getReferenceByEnquete(enquete);
-        return new ResponseEntity<Reference>(er, HttpStatus.OK);
+        final Reference ref = getReferenceByEnquete(enquete);
+        return new ResponseEntity<Reference>(ref, HttpStatus.OK);
     }
 
     private Reference getReferenceByEnquete(String enquete){
