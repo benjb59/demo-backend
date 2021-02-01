@@ -11,8 +11,8 @@ public class HelloWorldController {
     @Value("${fr.home.backend.message}")
     private String message;
 
-    @GetMapping("/hello")
-    public ResponseEntity<String> hello() {
+    @GetMapping("/idQuestionnaire")
+    public ResponseEntity<String> visualiser() {
         return ResponseEntity.ok(message);
     }
 }
