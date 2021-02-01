@@ -17,7 +17,7 @@ spec:
           image: melobenja/demo-backend:poc-col
           env:
           - name: FR_HOME_BACKEND_MESSAGE
-            value: "ESA"
+            value: "ORBEON 2 - ESA"
           resources:
           ports:
             - containerPort: 8080
