@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: poc-col2
-          image: melobenja/demo-backend
+          image: melobenja/demo-backend:poc-col
           env:
           - name: FR_HOME_BACKEND_MESSAGE
             value: "ESA"
