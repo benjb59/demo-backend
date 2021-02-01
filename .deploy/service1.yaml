@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-backend-svc
+  name: poc-col-svc1
 spec:
   selector:
-    app: demo-backend
+    app: poc-col1
   ports:
     - protocol: TCP
       port: 80

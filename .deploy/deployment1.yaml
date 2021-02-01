@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-col1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poc-col1
+  template:
+    metadata:
+      labels:
+        app: poc-col1
+    spec:
+      containers:
+        - name: poc-col1
+          image: melobenja/demo-backend
+          env:
+          - name: FR_HOME_BACKEND_MESSAGE
+            value: "ACEMO"
+          resources:
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always

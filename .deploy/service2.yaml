@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poc-col-svc2
+spec:
+  selector:
+    app: poc-col2
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

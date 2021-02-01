@@ -1,23 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-backend
+  name: poc-col2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-backend
+      app: poc-col2
   template:
     metadata:
       labels:
-        app: demo-backend
+        app: poc-col2
     spec:
       containers:
-        - name: backend-container
+        - name: poc-col2
           image: melobenja/demo-backend
+          env:
+          - name: FR_HOME_BACKEND_MESSAGE
+            value: "ESA"
           resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
           ports:
             - containerPort: 8080
+          imagePullPolicy: Always
