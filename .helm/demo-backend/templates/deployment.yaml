@@ -32,6 +32,37 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          env:
+            - name: SPRING_DATA_MONGODB_AUTHENTICATION-DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-auth
+                  key: spring.data.mongodb.authentication-database
+            - name: SPRING_DATA_MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-auth
+                  key: spring.data.mongodb.username
+            - name: SPRING_DATA_MONGODB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-auth
+                  key: spring.data.mongodb.password
+            - name: SPRING_DATA_MONGODB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-auth
+                  key: spring.data.mongodb.database
+            - name: SPRING_DATA_MONGODB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-auth
+                  key: spring.data.mongodb.port
+            - name: SPRING_DATA_MONGODB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-auth
+                  key: spring.data.mongodb.host
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
