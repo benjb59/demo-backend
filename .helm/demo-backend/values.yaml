@@ -8,7 +8,7 @@ image:
   repository: melobenja/demo-backend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "mongodb"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -77,3 +77,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+mongodb:
+  authentication:
+    database: 
+  username: 
+  password: 
+  database: 
+  port: 
+  host: 
