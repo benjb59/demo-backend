@@ -1,4 +1,4 @@
-Install from helm chart
+Install from helm chart (https://github.com/bitnami/charts/tree/master/bitnami/mongodb)
 
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
