@@ -8,6 +8,8 @@ public class Developer {
     private String id;
 
     private String firstName;
+    private String lastName;
+    private int age;
 
     public String getId() {
         return id;
@@ -40,8 +42,5 @@ public class Developer {
     public void setAge(int age) {
         this.age = age;
     }
-
-    private String lastName;
-    private int age;
 
 }
