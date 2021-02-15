@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  spring.data.mongodb.authentication-database: {{ .Values.mongodb.authentication.database }}
+  spring.data.mongodb.username: {{ .Values.mongodb.username }}
+  spring.data.mongodb.database: {{ .Values.mongodb.database }}
+  spring.data.mongodb.port: "{{ .Values.mongodb.port }}"
+  spring.data.mongodb.host: {{ .Values.mongodb.host }}
