@@ -1,0 +1,5 @@
+mongo-express:
+  mongodbEnableAdmin: true
+  mongodbAdminPassword:
+  mongodbServer:
+  mongodbAuthDatabase:

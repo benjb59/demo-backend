@@ -1,0 +1,8 @@
+apiVersion: v2
+name: my-mongo-express
+version: 1.0.0
+dependencies:
+  - name: mongo-express
+    version: 2.2.0
+    repository: https://repo.chartcenter.io/cowboysysop
+    enabled: true
