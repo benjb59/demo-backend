@@ -1,4 +1,4 @@
-package fr.home.backend.bean;
+package fr.home.backend.domain;
 
 import org.springframework.data.annotation.Id;
 

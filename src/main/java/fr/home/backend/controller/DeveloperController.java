@@ -1,6 +1,6 @@
 package fr.home.backend.controller;
 
-import fr.home.backend.bean.Developer;
+import fr.home.backend.domain.Developer;
 import fr.home.backend.service.DeveloperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

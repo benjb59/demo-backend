@@ -1,6 +1,6 @@
 package fr.home.backend.repository;
 
-import fr.home.backend.bean.Developer;
+import fr.home.backend.domain.Developer;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
 
