@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: k6-test
+spec:
+  template:
+    metadata:
+      name: k6-test
+    spec:
+      containers:
+      - name: k6
+        image: loadimpact/k6
+        args: ["run", "https://raw.githubusercontent.com/loadimpact/k6/master/samples/http_get.js"]
+      restartPolicy: Never
+  backoffLimit: 1
