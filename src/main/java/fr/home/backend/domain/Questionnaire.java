@@ -6,15 +6,15 @@ import org.springframework.data.annotation.Id;
 public class Questionnaire {
 
     @Id
-    private long id;
+    private String id;
 
     private JSONObject data;
 
-    public long getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -25,5 +25,5 @@ public class Questionnaire {
     public void setData(JSONObject data) {
         this.data = data;
     }
-
+    
 }
