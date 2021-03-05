@@ -1,15 +1,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: k6-test
+  name: k6-performance-test
 spec:
   template:
     metadata:
-      name: k6-test
+      name: k6-performance-test
     spec:
       containers:
-      - name: k6
-        image: loadimpact/k6
-        args: ["run", "https://raw.githubusercontent.com/loadimpact/k6/master/samples/http_get.js"]
+        - name: k6
+          image: loadimpact/k6
+          args: ["run", "-o", "influxdb=http://my-influxdb:8086", "--vus", "10", "--duration", "300s", "https://raw.githubusercontent.com/loadimpact/k6/master/samples/http_get.js"]
       restartPolicy: Never
-  backoffLimit: 1
