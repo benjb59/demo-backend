@@ -31,7 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
-/.helm/mongo-express/Chart.lock
-/.helm/mongo-express/charts/
-/.helm/mongodb/charts/
-/.helm/mongodb/Chart.lock
+
+### Helm chart ###
+Chart.lock
+charts/
+custom-values.yaml
+
