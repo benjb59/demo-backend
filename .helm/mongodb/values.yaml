@@ -1,4 +1,0 @@
-architecture: replicaset
-useStatefulSet: true
-rbac:
-  create: true

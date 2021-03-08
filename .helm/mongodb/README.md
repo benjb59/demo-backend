@@ -1,4 +1,4 @@
-In mongoDB shell
+In mongoDB shell (mongo -u root)
 
 ```
 use admin
