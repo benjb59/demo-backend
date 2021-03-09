@@ -1,3 +1,5 @@
+## Create user
+
 In mongoDB shell (mongo -u root)
 
 ```
