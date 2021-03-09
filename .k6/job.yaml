@@ -10,5 +10,10 @@ spec:
       containers:
         - name: k6
           image: loadimpact/k6
+          resources:
+            limits:
+              memory: "500Mi"
+            requests:
+              memory: "400Mi"
           args: ["run", "-o", "influxdb=http://my-influxdb:8086", "--vus", "10", "--duration", "300s", "https://raw.githubusercontent.com/loadimpact/k6/master/samples/http_get.js"]
       restartPolicy: Never
