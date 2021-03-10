@@ -16,8 +16,9 @@ export default function () {
 
   var url = 'http://demo-backend-mongo/questionnaires';
 
-  var payload = JSON.stringify(
-    {
+  var payload = JSON.stringify( {
+    id: 1,
+    data: {
         "COLLECTED": {
           "DATENAIS": {
             "PREVIOUS": null,
