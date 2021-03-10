@@ -1445,6 +1445,7 @@ export default function () {
           "emploi7": "if ( (cast(STATUT,string) = \"8\" or cast(STATUT,string) = \"9\" ) and (cast(SITUA,string) = \"1\" or cast(SITUA,string) = \"2\") ) then \"Combien de salariés employez-vous\" else if ( (cast(STATUT,string) = \"8\" or cast(STATUT,string) = \"9\" ) and (cast(SITUA,string) > 2 or cast(SITUA,string) = \"\") ) then \"Combien de salariés employiez-vous\" else if ( cast(STATUT,string) = \"10\" and ( cast(SITUA,string) = \"1\" or cast(SITUA,string) = \"2\" ) ) then \"Combien de salariés emploie la personne que vous aidez\" else if ( cast(STATUT,string) = \"10\" and ( cast(SITUA,string) > 2 or cast(SITUA,string) = \"\" ) ) then \"Combien de salariés employait la personne que vous aidiez\" else \"\""
         }
       }
+    }
   );
 
   var params = {
