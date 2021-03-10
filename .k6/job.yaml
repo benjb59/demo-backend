@@ -15,5 +15,5 @@ spec:
               memory: "500Mi"
             requests:
               memory: "400Mi"
-          args: ["run", "-o", "influxdb=http://my-influxdb:8086", "--vus", "10", "--duration", "300s", "https://raw.githubusercontent.com/loadimpact/k6/master/samples/http_get.js"]
+          args: ["run", "-o", "influxdb=http://my-influxdb:8086", "https://raw.githubusercontent.com/benjb59/demo-backend/mongodb/.k6/stress.js"]
       restartPolicy: Never
