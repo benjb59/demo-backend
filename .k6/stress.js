@@ -16,8 +16,10 @@ export default function () {
 
   var url = 'http://demo-backend-mongo/questionnaires';
 
+  var randomId = Math.random().toString(36).substring(2,7);
+
   var payload = JSON.stringify( {
-    id: 1,
+    id: randomId,
     data: {
         "COLLECTED": {
           "DATENAIS": {
