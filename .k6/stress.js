@@ -4,7 +4,7 @@ export let options = {
   scenarios: {
     questionnaires: {
       executor: 'constant-arrival-rate',
-      rate: 5,
+      rate: 1,
       duration: '1m',
       preAllocatedVUs: 50,
       maxVUs: 100,
@@ -19,8 +19,8 @@ export default function () {
   var randomId = Math.random().toString(36).substring(2,7);
 
   var payload = JSON.stringify( {
-    id: randomId,
-    data: {
+    "id": randomId,
+    "data": {
         "COLLECTED": {
           "DATENAIS": {
             "PREVIOUS": null,
