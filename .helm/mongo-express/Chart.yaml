@@ -3,6 +3,6 @@ name: my-mongo-express
 version: 1.0.0
 dependencies:
   - name: mongo-express
-    version: 2.2.0
+    version: 2.3.1
     repository: https://repo.chartcenter.io/cowboysysop
     enabled: true
