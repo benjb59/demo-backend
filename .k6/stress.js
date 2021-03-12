@@ -4,8 +4,8 @@ export let options = {
   scenarios: {
     questionnaires: {
       executor: 'constant-arrival-rate',
-      rate: 10,
-      duration: '1m',
+      rate: 30,
+      duration: '5m',
       preAllocatedVUs: 50,
       maxVUs: 100,
     },
