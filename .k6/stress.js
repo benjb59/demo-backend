@@ -14,7 +14,7 @@ export let options = {
 
 export default function () {
 
-  var url = 'http://demo-backend-mongo/questionnaires';
+  var url = 'http://demo-backend-mongodb/questionnaires';
 
   var randomId = Math.random().toString(36).substring(2,7);
 
